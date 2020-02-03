@@ -56,15 +56,47 @@
 		E1805F1223E877E3006AA281 /* WeatherSample */ = {
 			isa = PBXGroup;
 			children = (
-				E1805F1323E877E3006AA281 /* AppDelegate.swift */,
-				E1805F1523E877E3006AA281 /* SceneDelegate.swift */,
-				E1805F1723E877E3006AA281 /* ViewController.swift */,
-				E1805F1923E877E3006AA281 /* Main.storyboard */,
-				E1805F1C23E877E8006AA281 /* Assets.xcassets */,
-				E1805F1E23E877E8006AA281 /* LaunchScreen.storyboard */,
-				E1805F2123E877E8006AA281 /* Info.plist */,
+				E1805F2A23E8785A006AA281 /* Misc */,
+				E1805F2923E8784C006AA281 /* Storyboards */,
+				E1805F2823E8783D006AA281 /* App Delegates */,
+				E1805F2723E8782B006AA281 /* View Controllers */,
 			);
 			path = WeatherSample;
+			sourceTree = "<group>";
+		};
+		E1805F2723E8782B006AA281 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1805F1723E877E3006AA281 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E1805F2823E8783D006AA281 /* App Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E1805F1323E877E3006AA281 /* AppDelegate.swift */,
+				E1805F1523E877E3006AA281 /* SceneDelegate.swift */,
+			);
+			path = "App Delegates";
+			sourceTree = "<group>";
+		};
+		E1805F2923E8784C006AA281 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E1805F1923E877E3006AA281 /* Main.storyboard */,
+				E1805F1E23E877E8006AA281 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E1805F2A23E8785A006AA281 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				E1805F1C23E877E8006AA281 /* Assets.xcassets */,
+				E1805F2123E877E8006AA281 /* Info.plist */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LL59CY8FK2;
-				INFOPLIST_FILE = WeatherSample/Info.plist;
+				INFOPLIST_FILE = WeatherSample/Misc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LL59CY8FK2;
-				INFOPLIST_FILE = WeatherSample/Info.plist;
+				INFOPLIST_FILE = WeatherSample/Misc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
