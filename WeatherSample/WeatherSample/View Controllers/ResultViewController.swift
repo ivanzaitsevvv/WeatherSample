@@ -18,11 +18,7 @@ class ResultViewController: UIViewController {
     }
     
     func setup() {
-        if let result = WeatherLoader.shared.response {
-            resultLabel.text = "\(result.temperature) degrees in \(result.locationName)"
-        } else if let error = WeatherLoader.shared.error {
-            resultLabel.text = error.localizedDescription
-        }
+        resultLabel.text = WeatherLoader.shared.result
     }
 
 }

@@ -14,7 +14,9 @@
 		E12C26A223E88B3200BB0D9C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C26A123E88B3200BB0D9C /* NetworkManager.swift */; };
 		E12C26A623E88D0B00BB0D9C /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C26A523E88D0B00BB0D9C /* WeatherService.swift */; };
 		E12C26A923E8B44C00BB0D9C /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C26A823E8B44C00BB0D9C /* WeatherResponse.swift */; };
-		E12C26AB23E957BA00BB0D9C /* TemperatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C26AA23E957BA00BB0D9C /* TemperatureManager.swift */; };
+		E12C26AE23E9674700BB0D9C /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C26AD23E9674700BB0D9C /* AnalyticsManager.swift */; };
+		E12C26B223E96A8E00BB0D9C /* AnalyticsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C26B123E96A8E00BB0D9C /* AnalyticsButton.swift */; };
+		E12C26B423E96CED00BB0D9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E12C26B323E96CEC00BB0D9C /* GoogleService-Info.plist */; };
 		E1805F1423E877E3006AA281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1805F1323E877E3006AA281 /* AppDelegate.swift */; };
 		E1805F1623E877E3006AA281 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1805F1523E877E3006AA281 /* SceneDelegate.swift */; };
 		E1805F1B23E877E3006AA281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1805F1923E877E3006AA281 /* Main.storyboard */; };
@@ -36,7 +38,9 @@
 		E12C26A123E88B3200BB0D9C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E12C26A523E88D0B00BB0D9C /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		E12C26A823E8B44C00BB0D9C /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
-		E12C26AA23E957BA00BB0D9C /* TemperatureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureManager.swift; sourceTree = "<group>"; };
+		E12C26AD23E9674700BB0D9C /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		E12C26B123E96A8E00BB0D9C /* AnalyticsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsButton.swift; sourceTree = "<group>"; };
+		E12C26B323E96CEC00BB0D9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1805F1023E877E3006AA281 /* WeatherSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1805F1323E877E3006AA281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1805F1523E877E3006AA281 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +88,8 @@
 			children = (
 				E12C26A023E88B1700BB0D9C /* Network */,
 				E12C269C23E8850100BB0D9C /* LocationManager.swift */,
-				E12C26AA23E957BA00BB0D9C /* TemperatureManager.swift */,
 				E12C269E23E888B900BB0D9C /* WeatherLoader.swift */,
+				E12C26AD23E9674700BB0D9C /* AnalyticsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -105,6 +109,14 @@
 				E12C26A823E8B44C00BB0D9C /* WeatherResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E12C26B023E96A6B00BB0D9C /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				E12C26B123E96A8E00BB0D9C /* AnalyticsButton.swift */,
+			);
+			path = Subclasses;
 			sourceTree = "<group>";
 		};
 		E1805F0723E877E3006AA281 = {
@@ -128,6 +140,7 @@
 		E1805F1223E877E3006AA281 /* WeatherSample */ = {
 			isa = PBXGroup;
 			children = (
+				E12C26B023E96A6B00BB0D9C /* Subclasses */,
 				E12C26A723E8B43100BB0D9C /* Models */,
 				E12C269B23E884E500BB0D9C /* Managers */,
 				E1805F2823E8783D006AA281 /* App Delegates */,
@@ -170,6 +183,7 @@
 		E1805F2A23E8785A006AA281 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				E12C26B323E96CEC00BB0D9C /* GoogleService-Info.plist */,
 				E1805F1C23E877E8006AA281 /* Assets.xcassets */,
 				E1805F2123E877E8006AA281 /* Info.plist */,
 				E12C269923E8805B00BB0D9C /* Constants.swift */,
@@ -254,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1805F2023E877E8006AA281 /* LaunchScreen.storyboard in Resources */,
+				E12C26B423E96CED00BB0D9C /* GoogleService-Info.plist in Resources */,
 				E1805F1D23E877E8006AA281 /* Assets.xcassets in Resources */,
 				E1805F1B23E877E3006AA281 /* Main.storyboard in Resources */,
 			);
@@ -309,11 +324,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1805F3323E87CFE006AA281 /* TutorialCollectionViewCell.swift in Sources */,
+				E12C26AE23E9674700BB0D9C /* AnalyticsManager.swift in Sources */,
 				E1805F3023E87AB5006AA281 /* ResultViewController.swift in Sources */,
-				E12C26AB23E957BA00BB0D9C /* TemperatureManager.swift in Sources */,
 				E12C26A623E88D0B00BB0D9C /* WeatherService.swift in Sources */,
 				E12C26A223E88B3200BB0D9C /* NetworkManager.swift in Sources */,
 				E1805F1423E877E3006AA281 /* AppDelegate.swift in Sources */,
+				E12C26B223E96A8E00BB0D9C /* AnalyticsButton.swift in Sources */,
 				E1805F2C23E87A7B006AA281 /* TutorialViewController.swift in Sources */,
 				E12C269D23E8850100BB0D9C /* LocationManager.swift in Sources */,
 				E12C26A923E8B44C00BB0D9C /* WeatherResponse.swift in Sources */,
@@ -474,6 +490,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Test.WeatherSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -493,6 +510,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Test.WeatherSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

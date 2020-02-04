@@ -8,5 +8,6 @@ target 'WeatherSample' do
   # Pods for WeatherSample
   
   pod 'Moya'
+  pod 'Firebase/Analytics'
 
 end

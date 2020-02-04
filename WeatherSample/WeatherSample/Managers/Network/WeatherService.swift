@@ -39,7 +39,7 @@ extension WeatherService: TargetType {
     var task: Task {
         switch self {
         case .weather(let latitude, let longitude):
-            return .requestParameters(parameters: ["lat" : latitude, "lon" : longitude, "appid" : Constants.Network.weatherAPIKey], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["lat" : latitude, "lon" : longitude, "units" : "metric", "appid" : Constants.Network.weatherAPIKey], encoding: URLEncoding.queryString)
         }
     }
     

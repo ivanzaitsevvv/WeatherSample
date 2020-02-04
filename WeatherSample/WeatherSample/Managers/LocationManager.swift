@@ -30,7 +30,7 @@ class LocationManager: NSObject {
     private func setupLocationManager() {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
         }
     }
     
@@ -64,6 +64,10 @@ extension LocationManager: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        guard status != .notDetermined else {
+            return
+        }
         
         locationPermissionCallback?(status == .authorizedWhenInUse)
         locationPermissionCallback = nil

@@ -30,8 +30,18 @@ class WeatherLoader: NSObject {
         }
     }
     
-    var response: WeatherResponse?
-    var error: Error?
+    private var response: WeatherResponse?
+    private var error: Error?
+    
+    var result: String {
+        if let response = response {
+            return "\(response.temperature) degrees in \(response.locationName)"
+        } else if let error = error {
+            return error.localizedDescription
+        } else {
+            return ""
+        }
+    }
     
     func start() {
         guard state == .notRunning else {
@@ -67,5 +77,4 @@ class WeatherLoader: NSObject {
             })
         }
     }
-
 }

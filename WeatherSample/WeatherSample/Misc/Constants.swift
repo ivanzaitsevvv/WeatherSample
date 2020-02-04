@@ -20,11 +20,15 @@ struct Constants {
     }
     
     struct Network {
-        static let weatherBaseURL = "https://openweathermap.org/data/2.5"
+        static let weatherBaseURL = "https://api.openweathermap.org/data/2.5"
         static let weatherAPIKey = "000a1ae1cfcb63041b0ca1c053519bcc"
     }
     
     struct Notifications {
         static let weatherDidFinishLoading = "WeatherDidFinishLoading"
+    }
+    
+    struct Analytics {
+        static let trackingId = "UA-64849109-1"
     }
 }

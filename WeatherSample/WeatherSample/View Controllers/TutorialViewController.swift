@@ -11,7 +11,7 @@ import UIKit
 class TutorialViewController: UIViewController {
     
     @IBOutlet weak var tutorialCollectionView: UICollectionView!
-    @IBOutlet weak var tutorialNavigationButton: UIButton!
+    @IBOutlet weak var tutorialNavigationButton: AnalyticsButton!
     
     private let tutorialTitles = ["Tutorial Screen 1",
                                   "Tutorial Screen 2"]
