@@ -62,19 +62,21 @@ class WeatherLoader: NSObject {
             }) { error in
                 self.error = error
                 self.state = .finished
-                return
+                group.leave()
             }
             
             group.wait()
             
-            group.enter()
-            NetworkManager.shared.weather(by: self.latitude, longitude: self.longitude, completion: { [unowned self] response, error in
-                
-                self.response = response
-                self.error = error
-                self.state = .finished
-                group.leave()
-            })
+            if self.error == nil {
+                group.enter()
+                NetworkManager.shared.weather(by: self.latitude, longitude: self.longitude, completion: { [unowned self] response, error in
+                    
+                    self.response = response
+                    self.error = error
+                    self.state = .finished
+                    group.leave()
+                })
+            }
         }
     }
 }
