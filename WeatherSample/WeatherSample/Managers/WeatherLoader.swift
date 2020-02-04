@@ -40,28 +40,32 @@ class WeatherLoader: NSObject {
         
         state = .loading
         
-        let group = DispatchGroup()
-        
-        group.enter()
-        locationManager.requestLocation(success: { [unowned self] (latitude, longitude) in
+        DispatchQueue.global().async {
+            let group = DispatchGroup()
             
-            self.latitude = latitude
-            self.longitude = longitude
-            group.leave()
-        }) { error in
-            self.error = error
-            self.state = .finished
-            return
+            group.enter()
+            self.locationManager.requestLocation(success: { [unowned self] (latitude, longitude) in
+                
+                self.latitude = latitude
+                self.longitude = longitude
+                group.leave()
+            }) { error in
+                self.error = error
+                self.state = .finished
+                return
+            }
+            
+            group.wait()
+            
+            group.enter()
+            NetworkManager.shared.weather(by: self.latitude, longitude: self.longitude, completion: { [unowned self] response, error in
+                
+                self.response = response
+                self.error = error
+                self.state = .finished
+                group.leave()
+            })
         }
-        
-        group.enter()
-        NetworkManager.shared.weather(by: self.latitude, longitude: self.longitude, completion: { [unowned self] response, error in
-            
-            self.response = response
-            self.error = error
-            self.state = .finished
-            group.leave()
-        })
     }
 
 }

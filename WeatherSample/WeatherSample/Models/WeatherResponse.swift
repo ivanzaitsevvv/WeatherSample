@@ -11,4 +11,8 @@ import UIKit
 struct WeatherResponse {
     var locationName: String
     var temperature: Double
+    
+    var result: String {
+        return "\(temperature) degrees in \(locationName)"
+    }
 }
